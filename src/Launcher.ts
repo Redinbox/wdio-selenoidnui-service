@@ -54,7 +54,7 @@ export default class SelenoidStandaloneService {
             ...serviceOptions,
         };
 
-        this.log = logger('wdio-selenoid-service');
+        this.log = logger('wdio-selenoidNui-service');
 
         const platform = process.platform;
         if (platform === 'win32') {
