@@ -1,5 +1,5 @@
 {
-  "name": "wdio-selenoid-service",
+  "name": "wdio-selenoidNui-service",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.js",
@@ -7,20 +7,20 @@
     "test": "wdio",
     "lint": "eslint src",
     "build": "rimraf dist && tsc",
-    "test:link": "yarn link && yarn link wdio-selenoid-standalone-ui-service",
+    "test:link": "yarn link && yarn link wdio-selenoidNui-service",
     "build:watch": "yarn build --watch"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Redinbox/wdio-selenoid-service"
+    "url": "git+https://github.com/Redinbox/wdio-selenoidNui-service"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Redinbox/wdio-selenoid-service/issues"
+    "url": "https://github.com/Redinbox/wdio-selenoidNui-service/issues"
   },
-  "homepage": "https://github.com/Redinbox/wdio-selenoid-service#readme",
+  "homepage": "https://github.com/Redinbox/wdio-selenoidNui-service#readme",
   "dependencies": {
     "@wdio/logger": "^7.16.0",
     "execa": "^5.1.1",
