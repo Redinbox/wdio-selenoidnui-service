@@ -58,13 +58,14 @@ export.config = {
 };
 ```
 
-## where to check
+## Where to check
 
-### for selenoid 
+### For selenoid 
 http://localhost:4444/#/
 
-## for senoidui
+## For senoidui
 http://localhost:8080/#/
+
 
 
 More information about Selenoidnui-services can be found here
