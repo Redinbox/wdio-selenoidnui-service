@@ -1,4 +1,4 @@
-WebdriverIO Selenoid Service
+WebdriverIO Selenoid and senenoid ui Service
 
 ## Benefits of Selenoid-services
 
