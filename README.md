@@ -1,6 +1,6 @@
 WebdriverIO Selenoid and senenoid ui Service
 
-## Benefits of Selenoid-services
+## Benefits of Selenoidnui-services
 
 View the actual desktop and browser for all running tests
 Unlock the session and interact with the browser being controlled as if it was local
