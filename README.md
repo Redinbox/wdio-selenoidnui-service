@@ -58,7 +58,16 @@ export.config = {
 };
 ```
 
-More information about Selenoid-services can be found here
+## where to check
+
+### for selenoid 
+http://localhost:4444/#/
+
+## for senoidui
+http://localhost:8080/#/
+
+
+More information about Selenoidnui-services can be found here
 
 ## Options
 
