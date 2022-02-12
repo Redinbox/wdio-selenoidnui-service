@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Redinbox/wdio-selenoidNui-service.git"
+    "url": "git+https://github.com/Redinbox/wdio-selenoidnui-service.git"
   },
   "keywords": [],
   "author": "redinbox",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Redinbox/wdio-selenoidNui-service/issues"
+    "url": "https://github.com/Redinbox/wdio-selenoidnui-service/issues"
   },
-  "homepage": "https://github.com/Redinbox/wdio-selenoidNui-service#readme",
+  "homepage": "https://github.com/Redinbox/wdio-selenoidnui-service#readme",
   "dependencies": {
     "@wdio/logger": "^7.16.0",
     "execa": "^5.1.1",
