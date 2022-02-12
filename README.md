@@ -10,22 +10,22 @@ View all session logs for increased debugging
 
 Before starting make sure you have Docker installed
 
-The easiest way is to keep wdio-selenoid-service as a devDependency in your package.json.
+The easiest way is to keep wdio-selenoidnui-service as a devDependency in your package.json.
 ```
 {
     "devDependencies": {
-        "wdio-selenoid-service": "^1.0.0"
+        "wdio-selenoidnui-service": "^1.0.0"
     }
 }
 ```
 
 You can simple do it by:
 ```
-npm install wdio-selenoid-service --save-dev
+npm install wdio-selenoidnui-service --save-dev
 ```
 or
 
-yarn add wdio-selenoid-service --dev
+yarn add wdio-selenoidnui-service --dev
 
 Instructions on how to install WebdriverIO can be found here.
 
@@ -37,11 +37,10 @@ In order to use the service you need to add selenoid to your service array and c
 ```
 export.config = {
     services: [
-        ['selenoid']
+        ['selenoidnui']
     ],
 };
 ```
-The above assumes you are using the default settings from wdio-selenoid-standalone-service, if not, you can change them with the options below.
 
 Capabilities configuration
 
@@ -139,7 +138,7 @@ export.config = {
     path: 'wd/hub'
     services: [
         [
-            'selenoid', { 
+            'selenoidnui', { 
                 skipAutoPullImage: 'false,
                 selenoidContainerName: 'wdio_selenoid',
                 selenoidUiContainerName: 'wdio_selenoidui',
@@ -156,7 +155,7 @@ export.config = {
 
 Service cannot connect to Selenoid
 
-Ensure you have added wdio-selenoid-service to packages.json
+Ensure you have added wdio-selenoidnui-service to packages.json
 
 I cannot access the VNC session from the UI
 
