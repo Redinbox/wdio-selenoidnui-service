@@ -16,10 +16,7 @@ exports.config = {
     // Specify Test Files
     // ==================
     specs: ['./test/*.js'],
-    // Patterns to exclude.
-    exclude: [
-        // 'path/to/excluded/files'
-    ],
+
     //
     // ============
     // Capabilities
@@ -33,11 +30,9 @@ exports.config = {
     //
     capabilities: [
         {
-            // maxInstances can get overwritten per capability. So if you have an in-house Selenium
-            // grid with only 5 firefox instances available you can make sure that not more than
-            // 5 instances get started at a time.
             maxInstances: 1,
             browserName: 'chrome',
+            browserVersion: 'mobile-75.0',
             acceptInsecureCerts: true,
             'selenoid:options': {
                 enableVnc: true,

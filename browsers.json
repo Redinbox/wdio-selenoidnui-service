@@ -1,14 +1,4 @@
 {
-    "chrome": {
-        "default": "88.0",
-        "versions": {
-            "88.0": {
-                "image": "selenoid/vnc:chrome_88.0",
-                "port": "4444",
-                "path": "/"
-            }
-        }
-    },
     "firefox": {
         "default": "70.0",
         "versions": {
@@ -19,4 +9,14 @@
             }
         }
     },
+    "chrome": {
+        "default": "mobile-75.0",
+        "versions": {
+            "mobile-75.0": {
+                "image": "selenoid/chrome-mobile:75.0",
+                "port": "4444",
+                "path": "/wd/hub"
+            }
+        }
+    }
 }

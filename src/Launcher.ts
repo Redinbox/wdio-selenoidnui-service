@@ -39,6 +39,7 @@ export default class SelenoidStandaloneService {
     private log: Logger;
     private dockerSocketPath: string;
     private selenoidBrowsersConfigPath: string;
+    private sessionTimeout: number;
 
     constructor(serviceOptions: ServiceOptions) {
         this.options = {
@@ -55,6 +56,8 @@ export default class SelenoidStandaloneService {
         };
 
         this.log = logger('wdio-selenoidNui-service');
+
+        let sessionTimeout=20
 
         const platform = process.platform;
         if (platform === 'win32') {
@@ -118,6 +121,8 @@ export default class SelenoidStandaloneService {
             ...dockerArgs,
             `aerokube/selenoid:${this.options.selenoidVersion}`,
             ...selenoidArgs,
+            '-session-attempt-timeout',
+            '2m'
         ];
 
         try {
@@ -177,7 +182,7 @@ export default class SelenoidStandaloneService {
     async pullRequiredSelenoidVersion(): Promise<void> {
         this.log.info(`Pulling required selenoid version`);
         const image = `aerokube/selenoid:${this.options.selenoidVersion as string}`;
-
+        this.imageType(image)
         if (await this.doesImageExist(image)) {
             this.log.info(`Skipping pull.  Image ${image} already exists`);
         } else {
@@ -222,6 +227,12 @@ export default class SelenoidStandaloneService {
         }
     }
 
+    imageType(imageName: string){
+        if(imageName.includes('mobile')){
+            this.sessionTimeout=120
+        }
+    }
+
     async doesImageExist(imageName: string): Promise<boolean> {
         try {
             this.log.debug(`Checking image ${imageName} exists`);
@@ -258,7 +269,8 @@ export default class SelenoidStandaloneService {
 
     async waitForSelenoidToBeRunning(): Promise<void> {
         this.log.info(`Waiting for Selenoid to be Running`);
-        for (let i = 0; i < 20; i += 1) {
+
+        for (let i = 0; i < this.sessionTimeout; i += 1) {
             try {
                 const { stdout } = await execa('docker', ['ps', '-f', `name=${this.options.selenoidContainerName}`]);
                 const results = stdout.split('\n');
